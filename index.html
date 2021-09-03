@@ -14,9 +14,9 @@
     <a href="/">LocalGrub</a>
     <nav>
       <ul>
-        <li>Order Now</li>
-        <li>About</li>
-        <li>Contact</li>
+        <a href="#userInput">Order Now</a>
+        <a href="#hero">About</a>
+        <a href="#contact">Contact</a>
       </ul>
     </nav>
   </header>
@@ -43,11 +43,11 @@
         <div class="twelve columns">
           <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
           <label class="isDelivery u-pull-left">
-            <input type="radio">
+            <input name="radio" type="radio">
             <span class="yes">Yes</span>
           </label>
-          <label class="isNotDelivery u-pull-left">
-            <input type="radio">
+          <label class="isDelivery u-pull-left">
+            <input name="radio" type="radio">
             <span class="no">No</span>
           </label>
         </div>
@@ -56,18 +56,18 @@
       <form>
       <div class="row">
         <div class="twelve columns">
-          <label for="category" class="u-full-width">Select a Category</label>
+          <label id="category" for="category" class="u-full-width">Select a Category</label>
         </div>
         <div class="twelve columns">
-          <label class="category1">
+          <label id="pizza" class="category1">
             <input type="checkbox">
             <span class="pizza">Pizza</span>
           </label>
-          <label class="category2">
+          <label id="burgers" class="category2">
             <input type="checkbox">
             <span class="burgers">Burgers</span>
           </label>
-          <label class="category3">
+          <label id="ethnic" class="category3">
             <input type="checkbox">
             <span class="ethnic">Ethnic</span>
           </label>
@@ -81,7 +81,9 @@
     </div>
   </div>
   <footer>
-    
+    <div class="contact">
+
+    </div>
   </footer>
 </body>
 
