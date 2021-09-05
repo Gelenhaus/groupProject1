@@ -5,28 +5,57 @@
   <meta charset="utf-8">
   <title>LocalGrub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/skeleton.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
   <header>
-    <a href="/">LocalGrub</a>
+    <h1>
+      <a href="/">LocalGrub</a>
+    </h1>
     <nav>
       <ul>
-        <li>Order Now</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <a href="#userInput">Order Now</a>
+        </li>
+        <li>
+          <a href="#hero">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>
-  <div class="container">
-    <div id="hero" class="row">
+  <div id="hero">
+    <div id="hero-text">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi nisi optio expedita ad, necessitatibus hic
-        minus cupiditate placeat consequatur eum doloribus quia. At mollitia sapiente, alias omnis non modi?
+        Don’t know what you want to eat for dinner tonight?
+
+        Let our mind-reading eatery software decide for you!  
+      </br>
+      </br>
+        Submit the form below to populate local restaurants and a list of their services.
+
+        If you would like delivery, select a category and we will choose one of these delicious eats for you!
       </p>
     </div>
+    <div id="hero-img">
+      <img src="assets/images/burger.jpg">
+    </div>
+    <div id="hero-img">
+      <img src="assets/images/pizza.jpg">
+    </div>
+    <div id="hero-img">
+      <img src="assets/images/ethnic.jpg">
+    </div>
+  </div>
+  <div class="container">
     <div id="userInput" class="row">
       <form>
         <div class="three columns">
@@ -39,49 +68,54 @@
         </div>
       </form>
       <form>
-      <div class="row">
-        <div class="twelve columns">
-          <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
-          <label class="isDelivery u-pull-left">
-            <input type="radio">
-            <span class="yes">Yes</span>
-          </label>
-          <label class="isNotDelivery u-pull-left">
-            <input type="radio">
-            <span class="no">No</span>
-          </label>
+        <div class="row">
+          <div class="twelve columns">
+            <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
+            <label class="isDelivery u-pull-left">
+              <input name="radio" type="radio">
+              <span class="yes">Yes</span>
+            </label>
+            <label class="isDelivery u-pull-left">
+              <input name="radio" type="radio">
+              <span class="no">No</span>
+            </label>
+          </div>
         </div>
-      </div>
       </form>
       <form>
-      <div class="row">
-        <div class="twelve columns">
-          <label for="category" class="u-full-width">Select a Category</label>
+        <div class="row">
+          <div class="twelve columns">
+            <label id="category" for="category" class="u-full-width">Select a Category</label>
+          </div>
+          <div class="twelve columns">
+            <label id="pizza" class="category1">
+              <input type="checkbox">
+              <span class="pizza">Pizza</span>
+            </label>
+            <label id="burgers" class="category2">
+              <input type="checkbox">
+              <span class="burgers">Burgers</span>
+            </label>
+            <label id="ethnic" class="category3">
+              <input type="checkbox">
+              <span class="ethnic">Ethnic</span>
+            </label>
+          </div>
         </div>
-        <div class="twelve columns">
-          <label class="category1">
-            <input type="checkbox">
-            <span class="pizza">Pizza</span>
-          </label>
-          <label class="category2">
-            <input type="checkbox">
-            <span class="burgers">Burgers</span>
-          </label>
-          <label class="category3">
-            <input type="checkbox">
-            <span class="ethnic">Ethnic</span>
-          </label>
-        </div>
-      </div>
       </form>
     </div>
-
-    <div id="gridEl" class="nine columns">
-      <!--Card elements go here-->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div id="gridEl" class="nine columns">
+        <!--Card elements go here-->
+      </div>
     </div>
   </div>
   <footer>
-    
+    <div class="contact">
+
+    </div>
   </footer>
 </body>
 
