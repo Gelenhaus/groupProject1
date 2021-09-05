@@ -34,6 +34,7 @@ header h1 {
     font-size: 48px;
     margin: 0;
     text-shadow: 0 0 10px rgba (0, 0, 0, 0.5);
+    color: var(--accent-color);
 }
 header a {
     text-decoration: none;
@@ -46,10 +47,16 @@ header nav ul {
     list-style: none;
     margin: 0;
 }
+header nav ul li {
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    margin: 2px;
+}
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 2.5vw;
+    color: var(--white);
 }
 /* end <header> */
 
@@ -58,6 +65,7 @@ header nav ul li a {
     background-color: var(--primary-color);
     color: var(--accent-color);
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-between;
     background-attachment: fixed;
@@ -68,7 +76,10 @@ header nav ul li a {
     padding: 10px 15px;
     margin: 15px auto;
     width: 30%;
-    border-radius: 10px;
+    border-style: solid 1px var(--secondary-color);
+    margin: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
     border-color: var(--accent-color);
     border-width: 3px;
     border: solid;
@@ -77,15 +88,34 @@ header nav ul li a {
 #hero-img {
     color: var(--secondary-color);
     border-style: solid 1px var(--secondary-color);
-    width: 15%;
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+    width: 15%;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 #hero-img img {
     width: 100%;
     border-radius: 15px;
+}
+/* hero styles end */
+
+/* form style begin */
+#userInput {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    margin: 3%;
+    padding: 20px 35px;
+    font-size: larger;
+    text-shadow: 0 0 10px black;
+    border-radius: 15px;
+}
+form label {
+    line-height: 1.5;
+    margin: 2px;
+}
+form input {
+    background-color: var(--tertiary-color);
 }
