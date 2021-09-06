@@ -119,3 +119,9 @@ form label {
 form input {
     background-color: var(--tertiary-color);
 }
+.form-submit {
+    background-color: var(--secondary-color);
+    font-size: 1.4vw;
+    color: var(--white);
+    margin: auto;
+}
