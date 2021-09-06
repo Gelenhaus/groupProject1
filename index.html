@@ -23,8 +23,9 @@
   <div class="container">
     <div id="hero" class="row">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi nisi optio expedita ad, necessitatibus hic
-        minus cupiditate placeat consequatur eum doloribus quia. At mollitia sapiente, alias omnis non modi?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dolores iste cum incidunt. Nisi quod, ipsam corrupti velit in quam fuga, 
+        similique consequuntur dolores voluptas, ratione cupiditate debitis magni laboriosam ipsa.
       </p>
     </div>
     <div id="userInput" class="row">
@@ -41,13 +42,13 @@
       <form>
       <div class="row">
         <div class="twelve columns">
-          <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
+          <label for="isDelivery" class="u-full-width" id="isDeliveryId">Delivery ASAP?</label>
           <label class="isDelivery u-pull-left">
-            <input type="radio">
+            <input type="radio" name="radioName" id="radioId">
             <span class="yes">Yes</span>
           </label>
           <label class="isNotDelivery u-pull-left">
-            <input type="radio">
+            <input type="radio" name="radioName">
             <span class="no">No</span>
           </label>
         </div>
@@ -71,7 +72,9 @@
             <input type="checkbox">
             <span class="ethnic">Ethnic</span>
           </label>
+
         </div>
+        <button type="submit">Submit</button>
       </div>
       </form>
     </div>
@@ -83,6 +86,7 @@
   <footer>
     
   </footer>
+ <script src="script.js"></script>
 </body>
 
 </html>
