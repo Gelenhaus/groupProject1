@@ -1,8 +1,8 @@
 # LocalGrub
-- LocalGrub is a website that is designed to cloak domestic violence shelter searches and user requests for 911 assistance.
-- Front-facing, it appears as a local restaurant delivery randomizing service that will select a restaurant for you based on your category of interest.
-- However, once the user hovers over site content it will display the real details and instructions for the site.
-- Filling out the input form will return information for local domestic violence shelters nearby using Google OpenSearch API as well as uber ride time and pricing estimates using Uber API.
+LocalGrub is a website that is designed to cloak domestic violence shelter searches and user requests for 911 assistance.
+Front-facing, it appears as a local restaurant delivery randomizing service that will select a restaurant for you based on your category of interest.
+However, once the user hovers over site content it will display the real details and instructions for the site.
+Filling out the input form will return information for local domestic violence shelters nearby using Google OpenSearch API as well as uber ride time and pricing estimates using Uber API.
 
 ## USER STORY
 - AS A domestic abuse victim
@@ -25,7 +25,7 @@
 - THEN I am presented with the option to select police, fire, or paramedics
 
 ## Languages Used
-- HTML, CSS, JS, JSON, API
+HTML, CSS, JS, JSON, API
 
 ## API Integration
-- Google Find Place, Uber, Nexmo SMS via RapidAPI
+Google Find Place, Uber, Nexmo SMS via RapidAPI
