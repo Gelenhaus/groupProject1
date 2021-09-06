@@ -104,7 +104,7 @@ header nav ul li a {
 /* hero styles end */
 
 /* form style begin */
-#userInput {
+.userInput {
     background-color: var(--accent-color);
     color: var(--secondary-color);
     margin: 3%;
@@ -117,10 +117,8 @@ form label {
     line-height: 1.5;
     margin: 2px;
 }
-form input {
-    background-color: var(--tertiary-color);
-}
-.isDelivery input {
+.radio-btn, 
+.checkbox-btn {
     margin: auto 10px;
 }
 .form-submit {

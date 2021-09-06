@@ -56,62 +56,43 @@
     </div>
   </div>
   <div class="container">
-    <div id="userInput" class="row">
-      <form>
-        <div class="three columns">
-          <label for="Name">Your Name</label>
-          <input type="text" name="name" id="name" class="u-full-width" placeholder="Your Name">
-          <label for="Address">Address</label>
-          <input type="text" name="address" id="address" class="u-full-width" placeholder="Your Address">
-          <label for="Zip">Zip Code</label>
-          <input type="text" name="zip" id="zip" class="u-full-width" placeholder="84128">
-        </div>
-      </form>
-      <form>
-        <div class="row">
-          <div class="twelve columns">
-            <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
-            <label class="isDelivery u-pull-left">
-              <input name="radio" type="radio">
-              <span class="yes">Yes</span>
-            </label>
-            <label class="isDelivery u-pull-left">
-              <input name="radio" type="radio">
-              <span class="no">No</span>
-            </label>
-          </div>
-        </div>
-      </form>
-      <form>
-        <div class="row">
-          <div class="twelve columns">
-            <label id="category" for="category" class="u-full-width">Select a Category</label>
-          </div>
-          <div class="twelve columns">
-            <label id="pizza" class="category1">
-              <input type="checkbox">
-              <span class="pizza">Pizza</span>
-            </label>
-            <label id="burgers" class="category2">
-              <input type="checkbox">
-              <span class="burgers">Burgers</span>
-            </label>
-            <label id="ethnic" class="category3">
-              <input type="checkbox">
-              <span class="ethnic">Ethnic</span>
-            </label>
-          </div>
-        </div>
-      </form>
-      <div>
-        <button class="form-submit" type="submit">Submit</button>
-      </div>
-    </div>
-  </div>
-  <div class="container">
     <div class="row">
+      <form>
+        <div id="inputForm" class="three columns userInput">
+          <label for="Name">Your Name</label>
+            <input type="text" name="name" id="name" class="u-full-width" placeholder="Your Name">
+          <label for="Address">Address</label>
+            <input type="text" name="address" id="address" class="u-full-width" placeholder="Your Address">
+          <label for="Zip">Zip Code</label>
+            <input type="text" name="zip" id="zip" class="u-full-width" placeholder="84128">
+          <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
+            <input type="radio" class="radio-btn" name="radio">
+              <span class="yes">Yes</span>
+            <input type="radio" class="radio-btn" name="radio">
+              <span class="no">No</span>
+          <label for="category" id="category" class="u-full-width">Select a Category</label>
+            <input type="checkbox" class="checkbox-btn">
+              <span class="pizza">Pizza</span>
+          <br>
+            <input type="checkbox" class="checkbox-btn">
+              <span class="burgers">Burgers</span>
+          <br>
+            <input type="checkbox" class="checkbox-btn">
+              <span class="ethnic">Ethnic</span>
+          <br>
+          <button type="submit" class="form-submit">Submit</button>
+      </form>
+      </div>
       <div id="gridEl" class="nine columns">
         <!--Card elements go here-->
+        <div class="cardEl">
+          <h3>Restaurant</h3>
+          <p>Address</p>
+          <p>Services</p>
+          <p>Phone</p>
+          <p>Est. Delivery Time:</p>
+          <p>Delivery Fee</p>
+        </div>
       </div>
     </div>
   </div>
