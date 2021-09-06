@@ -25,6 +25,7 @@ header {
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 9999;
     top: 0;
     background-color: var(--tertiary-color);
     color: var(--accent-color)
@@ -118,6 +119,9 @@ form label {
 }
 form input {
     background-color: var(--tertiary-color);
+}
+.isDelivery input {
+    margin: auto 10px;
 }
 .form-submit {
     background-color: var(--secondary-color);
