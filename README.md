@@ -5,6 +5,6 @@ However, once the user hovers over site content it will display the real details
 Filling out the input form will return information for local domestic violence shelters nearby using Google OpenSearch API as well as uber ride time and pricing estimates using Uber API.
 
 ## USER STORY
-AS A domestic abuse victim
-I WANT a website where I can covertly find a shelter,
-SO THAT I can find somewhere I can safely go to get help without appearing in search history
+#### AS A domestic abuse victim
+#### I WANT a website where I can covertly find a shelter,
+#### SO THAT I can find somewhere I can safely go to get help without appearing in search history
