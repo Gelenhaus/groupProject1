@@ -127,3 +127,32 @@ form label {
     color: var(--white);
     margin: auto;
 }
+
+/* card element styles begin */
+.gridEl {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.cardEl {
+    font-size: 0.9vw;
+    margin: 10px;
+}
+.cardEl h3 {
+    margin: 0;
+}
+.cardElHeader {
+    background-color: var(--secondary-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--accent-color);
+    padding: 10px 25px;
+    margin: 0;
+}
+.cardElBody {
+    background-color: var(--tertiary-color);
+    color: var(--accent-color);
+    padding: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
