@@ -155,3 +155,8 @@ form label {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+/* footer styles */
+footer {
+    background-color: var(--tertiary-color);
+}
