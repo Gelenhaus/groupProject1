@@ -156,6 +156,15 @@ form label {
 }
 
 /* footer styles */
+.contact {
+    background-color: var(--primary-color);
+    padding: 10px
+}
 footer {
     background-color: var(--tertiary-color);
+    margin: 10px 0 0 0;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
 }
