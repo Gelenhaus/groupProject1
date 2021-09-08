@@ -57,18 +57,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-between;
+    align-items: center;
     background-attachment: fixed;
-    background-position: 80%;
+    padding: 30px;
 }
 #hero-text {
-    display: flex;
-    align-items: center;
     background-color: var(--white);
     padding: 10px 15px;
-    margin: 15px auto;
-    width: 30%;
     border-style: solid 1px var(--secondary-color);
-    margin: 2%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     border-color: var(--accent-color);
@@ -78,13 +74,10 @@ body {
 #hero-img {
     color: var(--secondary-color);
     border-style: solid 1px var(--secondary-color);
-    margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    width: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 15vw;
+    height: 15vw;
 }
 #hero-img img {
     width: 100%;
