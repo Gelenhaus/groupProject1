@@ -1,3 +1,9 @@
+var submitEl = document.querySelector("#buttonSubmit");
+var userInputName = document.querySelector("#name");
+var userInputAddress = document.querySelector("#address");
+var userInputZip = document.querySelector("#zip");
+var userInputCategory = document.querySelector("#category");
+
 var options = {
   method: "POST",
   url: "https://nexmo-nexmo-messaging-v1.p.rapidapi.com/send-sms",
@@ -5,7 +11,14 @@ var options = {
     to: "13854245740",
     from: "14357282960",
     type: "text",
-    text: 'Amber + "is in danger due to a domestic violence situation at "+ 123 Main Street + 84120 + ". They are requesting " + police + " be sent immediately. This message was sent from a cloaked website service, please send assistance and do not respond as it may endanger the victim."',
+    text:
+      userInputName +
+      "is in danger due to a domestic violence situation at " +
+      userInputAddress +
+      userInputZip +
+      ". They are requesting " +
+      police +
+      " be sent immediately. This message was sent from a cloaked website service, please send assistance and do not respond as it may endanger the victim.",
   },
   headers: {
     "x-rapidapi-host": "nexmo-nexmo-messaging-v1.p.rapidapi.com",
@@ -42,7 +55,15 @@ fetch(
   .catch((err) => {
     console.error(err);
   });
+// Fetch end
 
-submitCallBack();
-
-test;
+submitEl.onclick = function () {
+  // save to local storage
+  localStorage.setItem("name", userInputName.value);
+  localStorage.setItem("address", userInputAddress.value);
+  localStorage.setItem("zip", userInputZip.value);
+  // If check yes, go to submitCallBack(); function
+  if (document.getElementById("radio-yes").checked) {
+    submitCallBack();
+  }
+};
