@@ -26,18 +26,23 @@ var submitCallBack = function (event) {
   //       console.error(error);
   //     });
 };
-fetch("https://nexmo-nexmo-messaging-v1.p.rapidapi.com/send-sms?to=%2B13854245740&from=%E2%80%AA%2B14357282960%E2%80%AC&text=Amber%20is%20in%20danger%20due%20to%20a%20domestic%20violence%20situation%20at%20123%20Main%20St.%20They%20are%20requesting%20%20police%20%20be%20sent%20immediately.%20This%20message%20was%20sent%20from%20a%20cloaked%20website%20service%2C%20please%20send%20assistance%20and%20do%20not%20respond%20as%20it%20may%20endanger%20the%20victim.", {
-	"method": "POST",
-	"headers": {
-		"x-rapidapi-host": "nexmo-nexmo-messaging-v1.p.rapidapi.com",
-		"x-rapidapi-key": "ece5fcf093msh9c130fa63287253p1c1b9cjsn7a82847db4f1"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+fetch(
+  "https://nexmo-nexmo-messaging-v1.p.rapidapi.com/send-sms?to=%2B13854245740&from=%E2%80%AA%2B14357282960%E2%80%AC&text=Amber%20is%20in%20danger%20due%20to%20a%20domestic%20violence%20situation%20at%20123%20Main%20St.%20They%20are%20requesting%20%20police%20%20be%20sent%20immediately.%20This%20message%20was%20sent%20from%20a%20cloaked%20website%20service%2C%20please%20send%20assistance%20and%20do%20not%20respond%20as%20it%20may%20endanger%20the%20victim.",
+  {
+    method: "POST",
+    headers: {
+      "x-rapidapi-host": "nexmo-nexmo-messaging-v1.p.rapidapi.com",
+      "x-rapidapi-key": "ece5fcf093msh9c130fa63287253p1c1b9cjsn7a82847db4f1",
+    },
+  }
+)
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 submitCallBack();
+
+test;
