@@ -25,7 +25,7 @@ Filling out the input form will return information for local domestic violence s
 - THEN I am presented with the option to select police, fire, or paramedics
 
 ## Languages Used
-HTML, CSS, JS, JSON, API
+HTML, CSS, JS, API
 
 ## API Integration
-Google Find Place, Uber, Nexmo SMS via RapidAPI
+Google Custom Search, Nexmo SMS via RapidAPI
