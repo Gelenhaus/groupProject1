@@ -66,6 +66,10 @@ submitEl.onclick = function () {
   if (document.getElementById("radio-yes").checked) {
     // Show/un-hide google search bar when yes is clicked
     document.getElementById("google-search").style.display = "block";
+
+    // clear google search value when opened again
+    document.querySelector("#gsc-i-id1").value = "";
+
     // alert("yes");
     submitCallBack();
   } else {
