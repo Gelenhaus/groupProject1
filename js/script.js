@@ -2,7 +2,8 @@ var submitEl = document.querySelector("#buttonSubmit");
 var userInputName = document.querySelector("#name");
 var userInputAddress = document.querySelector("#address");
 var userInputZip = document.querySelector("#zip");
-var userInputCategory = document.querySelector("#category");
+// var userInputCategory = document.querySelector("#category");
+var categoryEl = "";
 
 var options = {
   method: "POST",
@@ -17,7 +18,7 @@ var options = {
       userInputAddress +
       userInputZip +
       ". They are requesting " +
-      police +
+      "police" +
       " be sent immediately. This message was sent from a cloaked website service, please send assistance and do not respond as it may endanger the victim.",
   },
   headers: {
@@ -57,6 +58,7 @@ fetch(
   });
 // Fetch end
 
+// when submit is clicked function.
 submitEl.onclick = function () {
   // save to local storage
   localStorage.setItem("name", userInputName.value);
@@ -66,4 +68,24 @@ submitEl.onclick = function () {
   if (document.getElementById("radio-yes").checked) {
     submitCallBack();
   }
+
+  // // Category section
+  // if (document.getElementById("pizza-input").checked) {
+  //   alert("Pizza");
+  // } else if (document.getElementById("burgers-input").checked) {
+  //   alert("Burgers");
+  // } else {
+  //   alert("Ethnic");
+  // }
+};
+
+var totalCategory = function () {
+  var input = document.getElementsByclass("productcheckbox-btn");
+  var total = 0;
+  for (var i = 0; i < input.length; i++) {
+    if (input[i].checked) {
+      total += parseFloat(input[i].value);
+    }
+  }
+  document.getElementById("total").value = "$" + total.toFixed(2);
 };
