@@ -51,10 +51,13 @@
     <div id="hero-img" class="hide-for-small-only">
       <img src="assets/images/ethnic.jpg">
     </div>
-    <!--Google Search-->
   </div>
-  <script async src="https://cse.google.com/cse.js?cx=7993f54b46ab75d60"></script>
+  <!--Google Search-->
+  <div id="google-search">
+    <p>"Please use this search bar to find domestic violence resources. These results will not appear in your browser search history."</p>
+    <script async src="https://cse.google.com/cse.js?cx=7993f54b46ab75d60"></script>
 <div class="gcse-search"></div>
+  </div>
 <!--End Google Search-->
   <div class="grid-container fluid">
     <div class="grid-x grid-margin-x">
@@ -69,17 +72,17 @@
           <label for="isDelivery" id="isDeliveryId">Delivery ASAP?</label>
             <input id="radio-yes" type="radio" class="radio-btn" name="radio">
               <span class="yes">Yes</span>
-            <input type="radio" class="radio-btn" name="radio">
+            <input id="radio-no" type="radio" class="radio-btn" name="radio">
               <span class="no">No</span>
           <label for="category" id="category">Select a Category</label>
             <input id="pizza-input" name="food" type="checkbox" class="checkbox-btn">
-              <span class="pizza">Pizza</span>
+              <span id="pizza" class="pizza">Pizza</span>
           <br>
             <input id="burgers-input" name="food" type="checkbox" class="checkbox-btn">
-              <span class="burgers">Burgers</span>
+              <span id="burgers" class="burgers">Burgers</span>
           <br>
             <input id="ethnic-input" name="food" type="checkbox" class="checkbox-btn">
-              <span class="ethnic">Ethnic</span>
+              <span id="ethnic" class="ethnic">Ethnic</span>
           <br>
           <input type="submit" class="form-submit button expanded" value="Submit" id="buttonSubmit" >
         </form>
