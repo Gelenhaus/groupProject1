@@ -5,6 +5,9 @@ var userInputZip = document.querySelector("#zip");
 var yesEl = document.querySelector("#radio-yes");
 var noEl = document.querySelector("#radio-no");
 var isDelEl = document.getElementById("isDeliveryId");
+var isPolice = document.getElementById("pizza");
+var isFire = document.getElementById("burgers");
+var isParamedic = document.getElementById("ethnic");
 
 // // hide google search on load.
 document.getElementById("google-search").style.display = "none";
@@ -23,6 +26,38 @@ isDelEl.onmouseover = function () {
 isDelEl.onmouseout = function () {
   isDelEl.textContent = "Delivery ASAP?";
   isDelEl.setAttribute("style", "color: --secondary-color;");
+};
+
+// Police hidden
+isPolice.onmouseover = function () {
+  isPolice.textContent = "Police";
+  isPolice.setAttribute("Style", "color: tomato;");
+};
+
+isPolice.onmouseout = function () {
+  isPolice.textContent = "Pizza";
+  isPolice.setAttribute("style", "color: --secondary-color;");
+};
+
+// Fire Hidden
+isFire.onmouseover = function () {
+  isFire.textContent = "Fire Department";
+  isFire.setAttribute("Style", "color: tomato;");
+};
+
+isFire.onmouseout = function () {
+  isFire.textContent = "Burgers";
+  isFire.setAttribute("style", "color: --secondary-color;");
+};
+// Paramedic hidden
+isParamedic.onmouseover = function () {
+  isParamedic.textContent = "Paramedics";
+  isParamedic.setAttribute("Style", "color: tomato;");
+};
+
+isParamedic.onmouseout = function () {
+  isParamedic.textContent = "Ethnic";
+  isParamedic.setAttribute("style", "color: --secondary-color;");
 };
 // Delivery ASAP hidden end
 
