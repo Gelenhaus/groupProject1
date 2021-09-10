@@ -13,11 +13,11 @@
 body {
     background-color: var(--white);
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size:x-large;
+    font-size: calc(1em + 1vw);
     line-height: 1.75;
 }
 /* apply styles to <header> */
-header {
+.top-bar {
     padding: 10px 35px;
     display: flex;
     justify-content: space-between;
@@ -25,38 +25,27 @@ header {
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 9999;
     top: 0;
     background-color: var(--tertiary-color);
     color: var(--accent-color)
 }
-header h1 {
+.top-bar-title {
     font-weight: bold;
     font-size: 48px;
     margin: 0;
     text-shadow: 0 0 10px rgba (0, 0, 0, 0.5);
     color: var(--accent-color);
 }
-header a {
+.menu {    
     text-decoration: none;
     color: var(--accent-color);
-}
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-}
-header nav ul li {
-    background-color: var(--accent-color);
-    border-radius: 15px;
-    margin: 2px;
-}
-header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 2.5vw;
-    color: var(--white);
+    color: var(--white);    
+    border-radius: 15px;
+    margin: 2px;
+
 }
 /* end <header> */
 
@@ -68,33 +57,27 @@ header nav ul li a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-between;
+    align-items: center;
     background-attachment: fixed;
-    background-position: 80%;
+    padding: 30px;
 }
 #hero-text {
     background-color: var(--white);
     padding: 10px 15px;
-    margin: 15px auto;
-    width: 30%;
     border-style: solid 1px var(--secondary-color);
-    margin: 2%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     border-color: var(--accent-color);
     border-width: 3px;
     border: solid;
-    font-size:smaller;
 }
 #hero-img {
     color: var(--secondary-color);
     border-style: solid 1px var(--secondary-color);
-    margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    width: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 15vw;
+    height: 15vw;
 }
 #hero-img img {
     width: 100%;
@@ -103,19 +86,80 @@ header nav ul li a {
 /* hero styles end */
 
 /* form style begin */
-#userInput {
+form {
     background-color: var(--accent-color);
-    color: var(--secondary-color);
-    margin: 3%;
+    color: var(--tertiary-color);
+    margin: 50px 0 0 25px;
     padding: 20px 35px;
-    font-size: larger;
     text-shadow: 0 0 10px black;
     border-radius: 15px;
 }
 form label {
+    color: var(--secondary-color);
+    font-size: 100%;
     line-height: 1.5;
     margin: 2px;
 }
-form input {
+.radio-btn, 
+.checkbox-btn {
+    margin: auto 10px;
+}
+.input {
+    border-radius: 10px;
+    font-size: 75%;
+}
+.form-submit {
+    background-color: var(--secondary-color);
+    font-size: 100%;
+    font-weight: lighter;
+    color: var(--white);
+    margin: auto;
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* card element styles begin */
+.cardEl {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 25px 0;
+}
+.cardElHeader p {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    font-size: larger;
+}
+.cardElHeader {
+    background-color: var(--secondary-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--accent-color);
+    padding: 10px 25px;
+    margin: 0;
+}
+.cardElBody {
     background-color: var(--tertiary-color);
+    color: var(--accent-color);
+    padding: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* footer styles */
+.contact {
+    background-color: var(--primary-color);
+    padding: 10px
+}
+footer {
+    background-color: var(--tertiary-color);
+    margin: 50px 0 0 0;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+.message-submit {
+    margin: 20px 10px 10px 10px;
 }

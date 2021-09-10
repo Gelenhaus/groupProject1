@@ -1,37 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>LocalGrub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/skeleton.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalGrub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">  
+  </head>
 
 <body>
-  <header>
-    <h1>
-      <a href="/">LocalGrub</a>
-    </h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="#userInput">Order Now</a>
-        </li>
-        <li>
-          <a href="#hero">About</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="top-bar topbar-responsive">
+    <div class="top-bar-title">
+      <a class="topbar-responsive-logo" href="./"><strong>LocalGrub</strong></a>
+    </div>
+    <div id="topbar-responsive" class="topbar-responsive-links">
+      <div class="top-bar-right">
+        <ul class="menu simple medium-horizontal">
+          <li><a href="#inputForm">Order Now</a></li>
+          <li><a href="#hero">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
   <div id="hero">
     <div id="hero-text">
       <p>
@@ -45,78 +42,153 @@
         If you would like delivery, select a category and we will choose one of these delicious eats for you!
       </p>
     </div>
-    <div id="hero-img">
+    <div id="hero-img" class="hide-for-small-only">
       <img src="assets/images/burger.jpg">
     </div>
-    <div id="hero-img">
+    <div id="hero-img" class="hide-for-small-only">
       <img src="assets/images/pizza.jpg">
     </div>
-    <div id="hero-img">
+    <div id="hero-img" class="hide-for-small-only">
       <img src="assets/images/ethnic.jpg">
     </div>
   </div>
-  <div class="container">
-    <div id="userInput" class="row">
-      <form>
-        <div class="three columns">
-          <label for="Name">Your Name</label>
-          <input type="text" name="name" id="name" class="u-full-width" placeholder="Your Name">
-          <label for="Address">Address</label>
-          <input type="text" name="address" id="address" class="u-full-width" placeholder="Your Address">
-          <label for="Zip">Zip Code</label>
-          <input type="text" name="zip" id="zip" class="u-full-width" placeholder="84128">
-        </div>
-      </form>
-      <form>
-        <div class="row">
-          <div class="twelve columns">
-            <label for="isDelivery" class="u-full-width">Delivery ASAP?</label>
-            <label class="isDelivery u-pull-left">
-              <input name="radio" type="radio">
-              <span class="yes">Yes</span>
-            </label>
-            <label class="isDelivery u-pull-left">
-              <input name="radio" type="radio">
-              <span class="no">No</span>
-            </label>
-          </div>
-        </div>
-      </form>
-      <form>
-        <div class="row">
-          <div class="twelve columns">
-            <label id="category" for="category" class="u-full-width">Select a Category</label>
-          </div>
-          <div class="twelve columns">
-            <label id="pizza" class="category1">
-              <input type="checkbox">
-              <span class="pizza">Pizza</span>
-            </label>
-            <label id="burgers" class="category2">
-              <input type="checkbox">
-              <span class="burgers">Burgers</span>
-            </label>
-            <label id="ethnic" class="category3">
-              <input type="checkbox">
-              <span class="ethnic">Ethnic</span>
-            </label>
-          </div>
-        </div>
-      </form>
-    </div>
+  <!--Google Search-->
+  <div id="google-search">
+    <p>"Please use this search bar to find domestic violence resources. These results will not appear in your browser search history."</p>
+    <script async src="https://cse.google.com/cse.js?cx=7993f54b46ab75d60"></script>
+<div class="gcse-search"></div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div id="gridEl" class="nine columns">
-        <!--Card elements go here-->
+<!--End Google Search-->
+  <div class="grid-container fluid">
+    <div class="grid-x grid-margin-x">
+      <div id="inputForm" class="cell small-12 medium-12 large-3">
+        <form>
+          <label for="Name">Your Name</label>
+            <input type="text" class="input" name="name" id="name" placeholder="Your Name">
+          <label for="Address">Address</label>
+            <input type="text" class="input" name="address" id="address" placeholder="Your Address">
+          <label for="Zip">Zip Code</label>
+            <input type="text" class="input" name="zip" id="zip" placeholder="84128">
+          <label for="isDelivery" id="isDeliveryId">Delivery ASAP?</label>
+            <input id="radio-yes" type="radio" class="radio-btn" name="radio">
+              <span class="yes">Yes</span>
+            <input id="radio-no" type="radio" class="radio-btn" name="radio">
+              <span class="no">No</span>
+          <label for="category" id="category">Select a Category</label>
+            <input id="pizza-input" name="food" type="checkbox" class="checkbox-btn">
+              <span id="pizza" class="pizza">Pizza</span>
+          <br>
+            <input id="burgers-input" name="food" type="checkbox" class="checkbox-btn">
+              <span id="burgers" class="burgers">Burgers</span>
+          <br>
+            <input id="ethnic-input" name="food" type="checkbox" class="checkbox-btn">
+              <span id="ethnic" class="ethnic">Ethnic</span>
+          <br>
+          <input type="submit" class="form-submit button expanded" value="Submit" id="buttonSubmit" >
+        </form>
+      </div>
+      <div class="grid-container full cell large-auto">
+        <div id="gridEl" class="grid-x align-center">
+          <!--Card elements go here-->
+          <div class="cardEl cell small-12 medium-4 large-3">
+            <div class="cardElHeader">
+              <p>Cafe Madrid</p>
+            </div>
+            <div class="cardElBody">
+              <p>5244 Highland Dr, Holladay, UT 84117</p>
+              <p>(801) 273-0837</p>
+              <p>Est. Delivery Time: 15 minutes</p>
+              <p>Delivery Fee: $2.06</p>
+            </div>
+          </div>
+          <div class="cardEl cell small-12 medium-4 large-3">
+            <div class="cardElHeader">
+              <p>Summerhays Halibut</p>
+            </div>
+            <div class="cardElBody">
+              <p>4870 Highland Dr, Holladay, UT 84117</p>
+              <p>(801) 424-9000</p>
+              <p>Est. Delivery Time: 25 minutes</p>
+              <p>Delivery Fee: $3.98</p>
+            </div>
+          </div>
+          <div class="cardEl cell small-12 medium-4 large-3">
+            <div class="cardElHeader">
+              <p>Greek City Grill</p>
+            </div>
+            <div class="cardElBody">
+              <p>6165 South Highland Drive Holladay, Salt Lake City, UT 84121</p>
+              <p>(801) 277-2355</p>
+              <p>Est. Delivery Time: 10 minutes</p>
+              <p>Delivery Fee: $1.87</p>
+            </div>
+          </div>
+          <div class="cardEl cell small-12 medium-4 large-3">
+            <div class="cardElHeader">
+              <p>Pizzeria Tasso</p>
+            </div>
+            <div class="cardElBody">
+              <p>4734 Holladay Blvd E, Holladay, UT 84117</p>
+              <p>(801) 810-9426</p>
+              <p>Est. Delivery Time: 13 minutes</p>
+              <p>Delivery Fee: $2.05</p>
+            </div>
+          </div>
+          <div class="cardEl cell small-12 medium-4 large-3">
+            <div class="cardElHeader">
+              <p>Proper Burger Company</p>
+            </div>
+            <div class="cardElBody">
+              <p>865 S Main St, Salt Lake City, UT 84111</p>
+              <p>(801) 906-8604</p>
+              <p>Est. Delivery Time: 18 minutes</p>
+              <p>Delivery Fee: $2.05</p>
+            </div>
+          </div>
+          <div class="cardEl cell small-12 medium-4 large-3">
+            <div class="cardElHeader">
+              <p>Wendy's</p>
+            </div>
+            <div class="cardElBody">
+              <p>5648 S 900 E, Murray, UT 84121</p>
+              <p>(801) 313-1620</p>
+              <p>Est. Delivery Time: 8 minutes</p>
+              <p>Delivery Fee: $1.55</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <footer>
-    <div class="contact">
-
+    <div id="contact" class="cell large-12 contact">Contact Us</div>
+    <div class="grid-container fluid">
+      <div class="grid-x grid-margin-x align-middle">
+        <!-- <div class="cell large-4">
+          <p></p>
+        </div> -->
+        <div class="cell large-auto">
+          <ul class="menu align-center">
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+          </ul>
+        </div>
+        <!-- <form class="cell large-4">
+          <label>Name
+            <input type="text" class="input" placeholder="Name">
+          </label>
+          <label>Email
+            <input type="text" class="input" placeholder="Email">
+          </label>
+          <label>
+            Message
+            <textarea class="input" rows="3" placeholder="Do you have something to say to us?"></textarea>
+          </label>
+          <input type="submit" class="form-submit message-submit button expanded" value="Submit">
+        </form> -->
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
