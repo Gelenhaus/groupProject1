@@ -24,8 +24,17 @@ Filling out the input form will return information for local domestic violence s
 - WHEN I select a category
 - THEN I am presented with the option to select police, fire, or paramedics
 
+## Wireframe
+![image](https://user-images.githubusercontent.com/87291933/132780062-d3d1d398-100c-411e-8c48-971ba65f1535.png)
+
+
 ## Languages Used
 HTML, CSS, JS, API
 
 ## API Integration
 Google Custom Search, Nexmo SMS via RapidAPI
+
+## Screen Shot
+
+## Links
+
