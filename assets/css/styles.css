@@ -70,6 +70,7 @@ body {
     border-color: var(--accent-color);
     border-width: 3px;
     border: solid;
+    width: 30%;
 }
 #hero-img {
     color: var(--secondary-color);
