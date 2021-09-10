@@ -6,7 +6,7 @@ var yesEl = document.querySelector("#radio-yes");
 var noEl = document.querySelector("#radio-no");
 var isDelEl = document.getElementById("isDeliveryId");
 
-// hide google search on load.
+// // hide google search on load.
 document.getElementById("google-search").style.display = "none";
 
 // save to local storage
@@ -56,7 +56,8 @@ var submitCallBack = function () {
 };
 
 // when submit is clicked function.
-submitEl.onclick = function () {
+submitEl.onclick = function (event) {
+  event.preventDefault();
   // save to local storage
   localStorage.getItem("name");
   localStorage.getItem("address");
@@ -66,7 +67,6 @@ submitEl.onclick = function () {
   if (document.getElementById("radio-yes").checked) {
     // Show/un-hide google search bar when yes is clicked
     document.getElementById("google-search").style.display = "block";
-
     // clear google search value when opened again
     document.querySelector("#gsc-i-id1").value = "";
 
