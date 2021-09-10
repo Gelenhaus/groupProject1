@@ -53,11 +53,6 @@ body {
 #hero {
     background-color: var(--primary-color);
     color: var(--accent-color);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
     background-attachment: fixed;
     padding: 30px;
 }
@@ -72,16 +67,15 @@ body {
     border: solid;
 }
 #hero-img {
-    color: var(--secondary-color);
-    border-style: solid 1px var(--secondary-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    width: 15vw;
-    height: 15vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 #hero-img img {
     width: 100%;
     border-radius: 15px;
+    width: 15vw;
+    height: 15vw;
 }
 /* hero styles end */
 
@@ -89,7 +83,7 @@ body {
 form {
     background-color: var(--accent-color);
     color: var(--tertiary-color);
-    margin: 50px 0 0 25px;
+    margin: 50px 0 0 0;
     padding: 20px 35px;
     text-shadow: 0 0 10px black;
     border-radius: 15px;
