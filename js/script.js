@@ -8,6 +8,7 @@ var isDelEl = document.getElementById("isDeliveryId");
 var isPolice = document.getElementById("pizza");
 var isFire = document.getElementById("burgers");
 var isParamedic = document.getElementById("ethnic");
+var heroTextEl = document.getElementById("hero-text");
 
 // // hide google search on load.
 document.getElementById("google-search").style.display = "none";
@@ -17,6 +18,15 @@ localStorage.setItem("name", userInputName.value);
 localStorage.setItem("address", userInputAddress.value);
 localStorage.setItem("zip", userInputZip.value);
 
+// onmouseover adjust for paragraph
+heroTextEl.onmouseover = function () {
+  heroTextEl.innerHTML = "<p>LocalGrub is NOT a restaurant delivery website. This application is a resource for victims of domestic violence to search for shelters and request emergency assistance without leaving any trace of their actions. <br></br> Please hover over page elements for instructions to use the form for it's actual purposes.</p>";
+  heroTextEl.style.color = "tomato";
+}
+heroTextEl.onmouseout = function () {
+  heroTextEl.innerHTML = "<p>Don’t know what you want to eat for dinner tonight? Let our mind-reading eatery software decide for you!</br></br>Submit the form below to populate local restaurants and a list of their services. If you would like delivery, select a category and we will choose one of these delicious eats for you!</p>"
+  heroTextEl.style.color = "";
+}
 // Delivery ASAP hidden
 isDelEl.onmouseover = function () {
   isDelEl.textContent = "DO YOU NEED 911?";
