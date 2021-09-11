@@ -1,3 +1,4 @@
+// global variables
 var submitEl = document.querySelector("#buttonSubmit");
 var userInputName = document.querySelector("#name");
 var userInputAddress = document.querySelector("#address");
@@ -10,6 +11,11 @@ var isFire = document.getElementById("burgers");
 var isParamedic = document.getElementById("ethnic");
 var heroTextEl = document.getElementById("hero-text");
 
+// global/setting variables.
+var categoryEl;
+var userInputCategory;
+
+// Hidden Features Start
 // // hide google search on load.
 document.getElementById("google-search").style.display = "none";
 
@@ -33,6 +39,7 @@ isDelEl.onmouseover = function () {
   isDelEl.setAttribute("Style", "color: tomato;");
 };
 
+// Delivery ASAP Show
 isDelEl.onmouseout = function () {
   isDelEl.textContent = "Delivery ASAP?";
   isDelEl.setAttribute("style", "color: --secondary-color;");
@@ -44,6 +51,7 @@ isPolice.onmouseover = function () {
   isPolice.setAttribute("Style", "color: tomato;");
 };
 
+// Police show
 isPolice.onmouseout = function () {
   isPolice.textContent = "Pizza";
   isPolice.setAttribute("style", "color: --secondary-color;");
@@ -55,21 +63,24 @@ isFire.onmouseover = function () {
   isFire.setAttribute("Style", "color: tomato;");
 };
 
+// Fire Show
 isFire.onmouseout = function () {
   isFire.textContent = "Burgers";
   isFire.setAttribute("style", "color: --secondary-color;");
 };
+
 // Paramedic hidden
 isParamedic.onmouseover = function () {
   isParamedic.textContent = "Paramedics";
   isParamedic.setAttribute("Style", "color: tomato;");
 };
 
+// Paramedic Show
 isParamedic.onmouseout = function () {
   isParamedic.textContent = "Ethnic";
   isParamedic.setAttribute("style", "color: --secondary-color;");
 };
-// Delivery ASAP hidden end
+// Hidden Features End
 
 // sending sms function submitCallBack();
 var submitCallBack = function () {
@@ -81,7 +92,7 @@ var submitCallBack = function () {
       userInputAddress +
       userInputZip +
       "%20They%20are%20requesting%20%20" +
-      "police" +
+      userInputCategory +
       "%20%20be%20sent%20immediately.%20This%20message%20was%20sent%20from%20a%20cloaked%20website%20service%2C%20please%20send%20assistance%20and%20do%20not%20respond%20as%20it%20may%20endanger%20the%20victim.",
     {
       method: "POST",
@@ -108,6 +119,10 @@ submitEl.onclick = function (event) {
   localStorage.getItem("address");
   localStorage.getItem("zip");
 
+  // When submit is clicked, create strings for sms text from category section
+  categoryEl = [];
+  checkBox();
+
   // If check yes, go to submitCallBack(); function
   if (document.getElementById("radio-yes").checked) {
     // Show/un-hide google search bar when yes is clicked
@@ -115,16 +130,15 @@ submitEl.onclick = function (event) {
     // clear google search value when opened again
     document.querySelector("#gsc-i-id1").value = "";
 
-    // alert("yes");
+    // Send to submitCallBack() function.
     submitCallBack();
   } else {
     // Show/un-hide google search bar when no is clicked
     document.getElementById("google-search").style.display = "block";
-
-    // alert("nothing to see here");
   }
 };
 
+// Delivery ASAP, if yes is clicked
 yesEl.onclick = function () {
   // show category section since yes was clicked
   document.getElementById("category").style.display = "block";
@@ -136,7 +150,7 @@ yesEl.onclick = function () {
   document.getElementById("ethnic").style.display = "initial";
 };
 
-//
+// Delivery ASAP, if no is clicked
 noEl.onclick = function () {
   // hide category section since no was clicked
   document.getElementById("category").style.display = "none";
@@ -148,11 +162,19 @@ noEl.onclick = function () {
   document.getElementById("ethnic").style.display = "none";
 };
 
-// // Category section
-// if (document.getElementById("pizza-input").checked) {
-//   alert("Pizza");
-// } else if (document.getElementById("burgers-input").checked) {
-//   alert("Burgers");
-// } else {
-//   alert("Ethnic");
-// }
+// Category section
+var checkBox = function () {
+  if (document.getElementById("pizza-input").checked) {
+    categoryEl.push("Police,");
+  }
+  if (document.getElementById("burgers-input").checked) {
+    categoryEl.push("Fire Department,");
+  }
+  if (document.getElementById("ethnic-input").checked) {
+    categoryEl.push("Paramedics");
+  }
+
+  userInputCategory = categoryEl.join(" ");
+  //test userInputCategory
+  console.log(userInputCategory);
+};
