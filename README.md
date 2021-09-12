@@ -35,6 +35,9 @@ HTML, CSS, JS, API
 Google Custom Search, Nexmo SMS via RapidAPI
 
 ## Screen Shot
+![image](https://user-images.githubusercontent.com/87291933/132970532-ba88f37b-506e-4c9e-8d5b-f2235a180309.png)
 
 ## Links
+https://Gelenhaus.github.io/groupProject1
+https://github.com/Gelenhaus/groupProject1.git
 
